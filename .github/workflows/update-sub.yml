@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update sub.txt (Demo Example)
-        run: |  
-          echo "更新时间：$(date)" > sub.txt    
-          echo "vless://106a7bb5-3a6a-413b-b803-1280cf988eb2@23.94.136.9:63422?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=8Uiw0-x-P1vTuq77lJS4X2sWOSa5lNdOA1qY3PRlx2E&type=tcp&headerType=none#233boy-tcp-23.94.136.9" >> sub.txt  
+        run: |
+          echo "更新时间：$(date)" > sub.txt
+          echo "vless://106a7bb5-3a6a-413b-b803-1280cf988eb2@23.94.136.9:63422?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=8Uiw0-x-P1vTuq77lJS4X2sWOSa5lNdOA1qY3PRlx2E&type=tcp&headerType=none#233boy-tcp-23.94.136.9" >> sub.txt
           echo "vless://df1c9fd2-761f-42d0-a23b-c908b2b4d746@wss.hangzhou9vpn.top:443?encryption=none&security=tls&type=ws&host=wss.hangzhou9vpn.top&path=%2Fdf1c9fd2-761f-42d0-a23b-c908b2b4d746#233boy-ws-wss.hangzhou9vpn.top" >> sub.txt
 
-      - name: Commit & Push changes  
+      - name: Commit & Push changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "jzrqs@users.noreply.github.com"
           git config --global user.name "DrRen Bot"
