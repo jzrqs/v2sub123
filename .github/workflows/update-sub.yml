@@ -1,12 +1,9 @@
-  name: Auto Update sub.txt
+name: Auto Update sub.txt
 
 on:
   schedule:
-    - cron: '0 3 * * *' # 每天凌晨 3 点自动更新
+    - cron: '0 3 * * *' # 每天凌晨 3 点定时更新
   workflow_dispatch: # 允许手动触发
-  push:
-    paths:
-      - 'update.py' # 如果未来加自动更新脚本，push update.py 也会触发
 
 jobs:
   update-sub:
@@ -16,12 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Update sub.txt (manual example)
+      - name: Update sub.txt (Demo Example)
         run: |
           echo "更新时间：$(date)" > sub.txt
           echo "vless://106a7bb5-3a6a-413b-b803-1280cf988eb2@23.94.136.9:63422?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=8Uiw0-x-P1vTuq77lJS4X2sWOSa5lNdOA1qY3PRlx2E&type=tcp&headerType=none#233boy-tcp-23.94.136.9" >> sub.txt
