@@ -2,7 +2,7 @@ name: Auto Update sub.txt
 
 on:
   schedule:
-    - cron: '0 3 * * *' # 每天凌晨 3 点定时更新
+    - cron: '0 3 * * *' # 每天凌晨 3 点定时自动更新
   workflow_dispatch: # 允许手动触发
 
 jobs:
